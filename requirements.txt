@@ -2,4 +2,4 @@ numpy==1.24.3
 pandas==2.0.0
 streamlit==1.21.0
 scikit-learn==1.2.2
-sqlite==3.36.0
+sqlite==3.41.2
