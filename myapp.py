@@ -2,7 +2,7 @@ import streamlit as st
 import model as m
 import pandas as pd
 #import snowflake_ingestion as si
-import sqlite3
+import sqlite
 
 st.title("Flight Delay Prediction")
 st.subheader("By Group_6 DSCI6007-1")
