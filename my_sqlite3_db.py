@@ -8,7 +8,7 @@ model = joblib.load('finalized_model.sav')
 
 #create a function to connect to the database and insert data
 def insert_to_db(month, day, scheduled_departure, departure_delay, scheduled_arrival, diverted, cancelled, air_system_delay, security_delay, airline_delay, late_aircraft_delay, weather_delay, result):
-    conn = sqlite3.connect('flight.db')
+    conn = sqlite3.connect('flights.db')
     query = "INSERT INTO user_data(MONTH, DAY, SCHEDULED_DEPARTURE, DEPARTURE_DELAY, SCHEDULED_ARRIVAL, DIVERTED, CANCELLED, AIR_SYSTEM_DELAY, SECURITY_DELAY, AIRLINE_DELAY, LATE_AIRCRAFT_DELAY, WEATHER_DELAY, result) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
     values = (month, day, scheduled_departure, departure_delay, scheduled_arrival, diverted, cancelled, air_system_delay, security_delay, airline_delay, late_aircraft_delay, weather_delay, result)
     conn.execute(query, values)
